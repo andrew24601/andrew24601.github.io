@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <style>
+          video {
+              display: none;
+          }
+      </style>
   </head>
 
   <body>
-    <video id="video"/>
+    <video id="video"></video>
 
     <canvas id="target" width="1538" height="2048"></canvas>
   <script type="text/javascript">
@@ -21,6 +26,7 @@
         });
 
         video.srcObject = stream;
+        video.play();
     }
     test();
 
@@ -55,7 +61,7 @@
             i += 4;
         }
         ctx2.putImageData(newFrame, 0, 0);
-    }, 1000);
+    }, 10);
     /*
 
 */
